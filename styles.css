@@ -160,6 +160,7 @@ a img{
 
     .android-drawer .drawer-image {
       position: absolute;
+      margin:auto;
       bottom: 16px;
     }
 
@@ -463,7 +464,7 @@ a img{
     display: none;
   }
 
-  .android-title {
+  .title-desktop {
     display: none !important;
   }
 
