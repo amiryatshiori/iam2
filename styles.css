@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #4D4D4D;
 }
 
 /* Disable ugly boxes around images in IE10 */
@@ -46,7 +47,7 @@ a img{
 
 .thanwa-io-header {
   overflow: visible;
-  background-color: #4D4D4D; 
+  background-color: #262626; 
 }
 
 /**
@@ -323,12 +324,12 @@ a img{
   position: relative;
   background: url('images/Bufftrip101_2699.jpg') center 30% no-repeat;
   background-size: cover;
-  height: 800px;
+  height: 850px;
   width: auto;
   
 }
 
-.android-wear-band {
+.thanwa-io-band {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -336,15 +337,15 @@ a img{
   background-color: #37474f;
 }
 
-.android-wear-band-text {
-  max-width: 800px;
+.thanwa-io-band-text {
+  max-width: 900px;
   margin-left: 25%;
   padding: 24px;
   text-align: left;
   color: white;
 }
 
-  .android-wear-band-text p {
+  .thanwa-io-band-text p {
     padding-top: 8px;
   }
 
@@ -498,7 +499,7 @@ a img{
   .title-mobile {
     display: block !important;
     position: absolute;
-    left: calc(50% - 95px);
+    left: calc(50% - 115px);
     top: -16px;
     -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -528,6 +529,10 @@ a img{
     height: 350px;
   }
 
+.thanwa-io-section1 {
+  height: 450px;
+}
+
   .android-slogan {
     font-size: 26px;
     margin: 0 16px;
@@ -553,7 +558,7 @@ a img{
     display: none;
   }
 
-  .android-wear-band-text {
+  .thanwa-io-band-text {
     margin-left: 0;
     padding: 16px;
   }
