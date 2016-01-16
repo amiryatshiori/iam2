@@ -21,11 +21,58 @@ a img{
   color: rgba(0, 0, 0, 0.87);
 }
 
-.android-header .mdl-menu__container {
+@font-face {
+  font-family: 'Chams-Bold';
+  src: url('fonts/Chams-Bold.woff') format('woff'),
+       url('fonts/Chams-Bold.ttf') format('truetype'),
+       url('fonts/Chams-Bold.svg#Chams-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ChamsBold';
+  src: url('ChamsBold.eot');
+  src: url('ChamsBold.eot?#iefix') format('embedded-opentype'),
+       url('ChamsBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.thanwa-io-header .mdl-menu__container {
   z-index: 50;
   margin: 0 !important;
 }
 
+.thanwa-io-header {
+  overflow: visible;
+  background-color: #4D4D4D; 
+}
+
+/**
+  background-color: #4D4D4D;  737373
+    background-color: #D9D9D9; 
+      background-color: #A6A6A6; 
+*/
+
+.thanwa-io-header .material-icons {
+  color: #D9D9D9 !important;
+}
+
+.thanwa-io-header .mdl-layout__drawer-button {
+  background: transparent;
+  color: #767777;
+}
+
+.thanwa-io-header .mdl-navigation__link {
+  color: #757575;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.title-mobile {
+  display: none !important;
+}
 
 .mdl-textfield--expandable {
   width: auto;
@@ -40,9 +87,7 @@ a img{
   color: black !important;
 }
 
-.title-mobile {
-  display: none !important;
-}
+
 
 .android-logo-image {
   height: 28px;
@@ -54,28 +99,9 @@ a img{
   width: 140px;
 }
 
-.android-header {
-  overflow: visible;
-  background-color: white;
-}
 
-  .android-header .material-icons {
-    color: #767777 !important;
-  }
 
-  .android-header .mdl-layout__drawer-button {
-    background: transparent;
-    color: #767777;
-  }
-
-  .android-header .mdl-navigation__link {
-    color: #757575;
-    font-weight: 700;
-    font-size: 14px;
-  }
-
-  .android-navigation-container {
-    /* Simple hack to make the overflow happen to the left instead... */
+  .thanwa-io-navigation-container {
     direction: rtl;
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
@@ -88,8 +114,7 @@ a img{
         width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .android-navigation {
-    /* ... and now make sure the content is actually LTR */
+  .thanwa-io-navigation {
     direction: ltr;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -98,13 +123,13 @@ a img{
     width: 800px;
   }
 
-  .android-search-box.is-focused + .android-navigation-container {
+  .android-search-box.is-focused + .thanwa-io-navigation-container {
     opacity: 0;
     width: 100px;
   }
 
 
-  .android-navigation .mdl-navigation__link {
+  .thanwa-io-navigation .mdl-navigation__link {
     display: inline-block;
     height: 60px;
     line-height: 68px;
@@ -112,9 +137,9 @@ a img{
     border-bottom: 4px solid transparent;
   }
 
-    .android-navigation .mdl-navigation__link:hover {
-      border-bottom: 4px solid #EE6C00;
-    }
+  .thanwa-io-navigation .mdl-navigation__link:hover {
+    border-bottom: 4px solid #EE6C00;
+  }
 
   .android-search-box {
     -webkit-box-ordinal-group: 3;
@@ -294,11 +319,13 @@ a img{
   }
 
 
-.android-wear-section {
+.thanwa-io-section1 {
   position: relative;
-  background: url('images/wear.png') center top no-repeat;
+  background: url('images/Bufftrip101_2699.jpg') center 30% no-repeat;
   background-size: cover;
   height: 800px;
+  width: auto;
+  
 }
 
 .android-wear-band {
@@ -460,7 +487,7 @@ a img{
 
 /**** Mobile layout ****/
 @media (max-width: 900px) {
-  .android-navigation-container {
+  .thanwa-io-navigation-container {
     display: none;
   }
 
@@ -472,7 +499,7 @@ a img{
     display: block !important;
     position: absolute;
     left: calc(50% - 95px);
-    top: 12px;
+    top: -16px;
     -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -481,7 +508,7 @@ a img{
      consecutive "+" operators in some cases. Therefore, we need to use both
      here to cover all the bases. */
   .android.android-search-box.is-focused ~ .title-mobile,
-  .android-search-box.is-focused + .android-navigation-container + .title-mobile {
+  .android-search-box.is-focused + .thanwa-io-navigation-container + .title-mobile {
     opacity: 0;
   }
 
